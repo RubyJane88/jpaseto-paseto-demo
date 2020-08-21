@@ -42,7 +42,7 @@ public class DemoApplication {
                 .setIssuedAt(now)
                 .setExpiration(now.plus(1, ChronoUnit.HOURS))
                 .setAudience("blog-post")
-                .setIssuer("https://inmeta.no/blog/")
+                .setIssuer("https://rubyjanecabagnot.pro/blog/")
                 .claim("customclaim", new Random().nextInt(100) + 1)
                 .compact();
     }
@@ -61,7 +61,7 @@ public class DemoApplication {
                 .setSharedSecret(SHARED_SECRET)
                 .setPublicKey(KEY_PAIR.getPublic())
                 .requireAudience("blog-post")
-                .requireIssuer("https://inmeta.no/blog/")
+                .requireIssuer("https://rubyjanecabagnot.pro/blog/")
                 .build();
 
         parser.parse(token);
